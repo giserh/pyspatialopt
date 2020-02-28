@@ -1,4 +1,9 @@
 # pyspatialopt
+
+**Note** A newer library that eventually will replace this is in progress [here](https://github.com/apulverizer/allagash/)
+
+----
+
 An open source python library for spatial optimization modeling. Be sure to check out the [wiki pages](https://github.com/apulverizer/pyspatialopt/wiki) for more information.
 
 This library can be used to generate and solve spatial optimization models (in the form of .lp or .mps files) from spatial data. 
@@ -24,16 +29,15 @@ The following models are supported:
     * Church, Richard, and Alan Murray. 2009. Coverage. In Business Site Selection, Location Analysis, and GIS. Hoboken, New Jersey: Wiley.
     * Tong, D. (2012). Regional coverage maximization: a new model to account implicitly for complementary coverage. Geographical Analysis, 44(1), 1-14.
  * Backup Coverage Location Problem (BCLP)
-    * Hogan, Kathleen, and Charles Revelle. 1986. Concepts and Applications of Backup Coverage. Management Science 32 (11):1434-1444.
+    * Hogan, Kathleen, and Charles Revelle. 1986. Concepts and Applications of Backup Coverage. Management Science 32 (11), 1434-1444.
  * Location Set Covering Problem (LSCP)
-    * Toregas, Constantine, et al. "The location of emergency service facilities." Operations Research 19.6 (1971): 1363-1373.
+    * Toregas, Constantine, et al (1971). "The location of emergency service facilities." Operations Research 19.6, 1363-1373.
  * Backup Coverage Location Problem (BCLPCC)
-    * Pulver, Aaron and Ran Wei. Presentation given at AAG 2016. San Fransico, CA.
-    * Paper in review
+    * Pulver, Aaron, and  Ran Wei (2018). "Optimizing the spatial location of medical drones". Applied Geography 90(1), 9-16.
  * The Trauma Resource Allocation Model for Ambulances and Hospitals (TRAUMAH)
     * Branas, C. C., MacKenzie, E. J., & ReVelle, C. S. (2000). A trauma resource allocation model for ambulances and hospitals. Health Services Research, 35(2), 489.
  
-#Workflow
+## Workflow
 1. Load a spatial data into a feature (vector) layer
 2. Create a coverage(s) dictionary/json object by performing spatial operations to determine which facilities cover which demand areas (overlay, intersect ...)
 3. Merge any coverages created, if you want to incorporate multiple facility types (optional)
@@ -42,7 +46,7 @@ The following models are supported:
 6. Solve the model using whatever tools are supported py PuLP (Gurobi, GLPK...)
 7. Do something with the results (Map them, get stats...)
 
-#Example usage
+## Example usage
 The map shown above was derived from the results of this example.
 
 ```python
@@ -72,7 +76,7 @@ The map shown above was derived from the results of this example.
                                                        facility_service_areas_fl)
 ```
  
-#Installation
+## Installation
 
 **Note I have only tested the installation and funcationality of the library on Windows 10 though I see no reason why it won't work on \*nix and OSX systems.**
 
